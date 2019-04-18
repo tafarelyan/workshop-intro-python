@@ -1,0 +1,161 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/white.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/monokai.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+          <h1>Aulão de Python</h1>
+        </section>
+        <section>
+          <h2>Quem é esse cara?</h2>
+          <ul>
+            <p>5º <s>6º</s> ano Engenharia de Minas</p>
+            <p>Desenvolvedor de ferramentas de Marketing</p>
+            <p>Sabe Python o suficiente para dar essa aula</p>
+          </ul>
+        </section>
+        <section>
+          <h2>Variavéis básicas</h2>
+          <table>
+            <tbody>
+              <tr>
+                <td>Números</td>
+                <td>Strings</td>
+              </tr>
+              <tr>
+                <td>Booleanas</td>
+                <td>Listas</td>
+              </tr>
+              <tr>
+                <td>Condicionais</td>
+                <td>Loops</td>
+              </tr>
+              <tr>
+                <td>Funções</td>
+                <td>Import</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+        <section>
+          <h2>Exercícios "Básicos"</h2>
+          <pre><code data-trim data-noescape>
+            def troca(x, y):
+                aux = x
+                x = y
+                y = aux
+            x = 10
+            y = 20
+            troca(x, y)
+            print("x =", x, "y=", y) 
+          </code></pre>
+        </section>
+        <section>
+          <h2>Exercícios "Básicos"</h2>
+          <pre><code data-trim data-noescape>
+            count = 0
+            while count <= 10:
+                print(count, "Estou muito animadx para o Piratas")
+                count += 1
+          </code></pre>
+        </section>
+        <section>
+          <h2>Exercícios "Básicos"</h2>
+          <pre><code data-trim data-noescape>
+            x = input("Qual a sua idade?")
+          </code></pre>
+        </section>
+        <section>
+          <h2>Exercícios "Básicos"</h2>
+          <pre><code data-trim data-noescape>
+            multiplica(a, b):
+                return a * b
+            print(multiplica(4, 5))
+          </code></pre>
+        </section>
+        <section>
+          <h2>Exercícios "Básicos"</h2>
+          <ul>
+            <p>Construir uma lista de quadrados dos números da lista exemplo</p>
+            <p>Construir a mesma lista com quadrados dos números pares</p>
+          </ul>
+        </section>
+        <section>
+          <h2>Manipulação de string</h2>
+        </section>
+        <section>
+          <h2>Compreensão de Lista</h2>
+        </section>
+        <section>
+          <h2>Exercício</h2>
+          <p>Construir 10 nomes quaisquer</p>
+          <pre><code data-trim data-noescape>
+            import urllib.request
+
+            palavras_url = 'http://svnweb.freebsd.org/csrg/share/dict/\
+            words?view=co&content-type=text/plain'
+            response = urllib.request.urlopen(palavras_url)
+            palavras = response.read().decode().splitlines()
+          </code></pre>
+        </section>
+        <section>
+          <h2>Dicionário</h2>
+        </section>
+        <section>
+          <h2>Exercício</h2>
+          <p>Criar um boletim com esses 10 nomes</p>
+          <p>Dicionário com listas para cada entrada abaixo:</p>
+          <ul>
+            <li>Nome</li>
+            <li>No USP</li>
+            <li>Notas</li>
+            <li>Classifição</li>
+        </section>
+        <section>
+          <h2>Exercício Extra</h2>
+          <p>Exportar esse dicionário para csv</p>
+        </section>
+			</div>
+		</div>
+
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+        hash: true,
+
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true }
+				]
+			});
+		</script>
+	</body>
+</html>
